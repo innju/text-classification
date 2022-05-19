@@ -41,7 +41,7 @@ The performance of the model is viewed from tensorboard. In order to access to t
 
 ### IMPROVEMENTS/SUGGESTIONS
 1. Training deep learning model required more times because it analyzed based on large amount of words. Use google colab to train the model if the capacity of your device is not sufficient.
-2. Can try to explore more ways of data cleaning in order to ensure the input loading to the deep learning model is sufficient and useful information with adequate amount of data. Examples are removal of stopwords.
+2. Can try to explore more ways of data cleaning in order to ensure the input loading to the deep learning model is sufficient and useful information with adequate amount of data. Examples is removal of stopwords.
 3. Change the deep learning model to a simpler architecture such as removing the bidirectional feature and left only model with LSTM layer. 
 
 
