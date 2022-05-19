@@ -21,24 +21,27 @@ The python scripts uploaded had been tested and run using Spyder(Python 3.8).
 <br>**tokenizer_sentiment.json**: json file stored tokenizer trained
 
 ### MODEL
+Figure below show the architecture of the model.
 
+![Image]()
 
+Embedding layer is used to fasten the training process. LSTM layer kept all the relevant information as it passes through every layer. Bidirectional layer of LSTM also is used to make the training process faster. It capable in utilizing information from both sides.tanh activation function is used to overcome vanishing gradient.Dropout layer is used to prevent overfitting. The value is only 0.2 to prevent too many information loss during data training.
 
+![Image]()
 
-Embedding layer is used to 
-Bidirectional layer of LSTM can
-tanh activation function in LSTM
-Dropout layer prevented overfitting
+Classification report shows the accuracy of the model is ? which is equivalent to ?%.It can accurately predict for all the categories.
 
+![Image]()
 
 The performance of the model is viewed from tensorboard. In order to access to the tensorboard, you will need to follow the steps below:
 Open anaconda prompt> conda activate (environment name) > tensorboard --logdir (path pointed to relevant log file)
-Tensorboard show performance of 
+<br>Tensorboard show performance of model through the epoch loss and epoch accuracy. The training data gained ? value for epoch loss and ? value for epoch accuracy compared to the validate.
+
 
 ### IMPROVEMENTS/SUGGESTIONS
 1. Training deep learning model required more times because it analyzed based on large amount of words. Use google colab to train the model if the capacity of your device is not sufficient.
 2. Can try to explore more ways of data cleaning in order to ensure the input loading to the deep learning model is sufficient with adequate amount of data.
-
+3. I gained high accuracy when trained with less epochs and higher accuracy when trained with higher epochs. It is always adviseable to train for lower and higher epochs to see if there is any changes in performance.
 
 
 Thanks for reading.
