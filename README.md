@@ -11,8 +11,8 @@ The python scripts uploaded had been tested and run using Spyder(Python 3.8).
 
 ### FOLDERS AND FILES
 **figures folder**: classification report, tensorboard interface for performance evaluation, model architecture
+<br>**log_sentiment_analysis folder**: history of training for tensorboard visualization.
 <br>**__pycache__**: Auto generated file to connect the modules with the training file.
-<br>**log_sentiment_analysis**: history of training for tensorboard visualization.
 <br>**__init__.py**: initial file to connect classes and functions with training file.
 <br>**ohe.pkl**: pickle file stored one hot encoder trained
 <br>**sentiment_analysis_h5**: saved trained model
@@ -29,19 +29,19 @@ Embedding layer is used to fasten the training process. LSTM layer kept all the 
 
 ![Image](https://github.com/innju/text-classification/blob/main/figures/textdoc_classification_report.png)
 
-Classification report shows the accuracy of the model is ? which is equivalent to ?%.It can accurately predict for all the categories.
+Classification report shows the accuracy of the model is 0.90 which is equivalent to 90.0%.It can accurately predict for all the categories.
 
 ![Image](https://github.com/innju/text-classification/blob/main/figures/textdoc_tensorboard.png)
 
 The performance of the model is viewed from tensorboard. In order to access to the tensorboard, you will need to follow the steps below:
 Open anaconda prompt> conda activate (environment name) > tensorboard --logdir (path pointed to relevant log file)
-<br>Tensorboard show performance of model through the epoch loss and epoch accuracy. The training data gained ? value for epoch loss and ? value for epoch accuracy compared to the validate.
+<br>Tensorboard show performance of model through the epoch loss and epoch accuracy. The training data (orange line) gained higher value for epoch accuracy and lower value for epoch loss compared to the validate (blue line). This means the data actually trained well with the training data only. Suspecting there is overfitting occured here because the epoch loss for validate is much more higher, with the value of 0.54. Possible solution is to reduce the complexity of the model.  
 
 
 ### IMPROVEMENTS/SUGGESTIONS
 1. Training deep learning model required more times because it analyzed based on large amount of words. Use google colab to train the model if the capacity of your device is not sufficient.
 2. Can try to explore more ways of data cleaning in order to ensure the input loading to the deep learning model is sufficient with adequate amount of data.
-3. I gained high accuracy when trained with less epochs and higher accuracy when trained with higher epochs. It is always adviseable to train for lower and higher epochs to see if there is any changes in performance.
+3. I gained high accuracy when trained with less epochs and higher accuracy when trained with higher epochs. It is always adviseable to train for lower and higher epochs to see if there is any changes in performance. 
 
 
 Thanks for reading.
