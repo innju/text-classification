@@ -35,13 +35,14 @@ Classification report shows the accuracy of the model is 0.90 which is equivalen
 
 The performance of the model is viewed from tensorboard. In order to access to the tensorboard, you will need to follow the steps below:
 Open anaconda prompt> conda activate (environment name) > tensorboard --logdir (path pointed to relevant log file)
-<br>Tensorboard show performance of model through the epoch loss and epoch accuracy. The training data (orange line) gained higher value for epoch accuracy and lower value for epoch loss compared to the validate (blue line). This means the data actually trained well with the training data only. Suspecting there is overfitting occured here because the epoch loss for validate is much more higher, with the value of 0.54. Possible solution is to reduce the complexity of the model.  
+
+<br>Tensorboard show performance of model through the epoch loss and epoch accuracy. The training data (blue line) gained higher value for epoch accuracy and lower value for epoch loss compared to the validate (red line). This means the model actually trained well with the training data only but performed poorly on the new data in validation set. Suspecting there is overfitting occured here because the epoch loss for validate is much more higher, with the value of 0.54. Therefore, spotted validation loss decreases and start to increase again. Possible solution is to reduce the complexity of the model. Early stopping could be introduced to prevent it from overfitting as well. 
 
 
 ### IMPROVEMENTS/SUGGESTIONS
 1. Training deep learning model required more times because it analyzed based on large amount of words. Use google colab to train the model if the capacity of your device is not sufficient.
 2. Can try to explore more ways of data cleaning in order to ensure the input loading to the deep learning model is sufficient with adequate amount of data.
-3. I gained high accuracy when trained with less epochs and higher accuracy when trained with higher epochs. It is always adviseable to train for lower and higher epochs to see if there is any changes in performance. 
+
 
 
 Thanks for reading.
