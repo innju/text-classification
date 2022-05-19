@@ -23,15 +23,15 @@ The python scripts uploaded had been tested and run using Spyder(Python 3.8).
 ### MODEL
 Figure below show the architecture of the model.
 
-![Image]()
+![Image](https://github.com/innju/text-classification/blob/main/figures/model.png)
 
 Embedding layer is used to fasten the training process. LSTM layer kept all the relevant information as it passes through every layer. Bidirectional layer of LSTM also is used to make the training process faster. It capable in utilizing information from both sides.tanh activation function is used to overcome vanishing gradient.Dropout layer is used to prevent overfitting. The value is only 0.2 to prevent too many information loss during data training.
 
-![Image]()
+![Image](https://github.com/innju/text-classification/blob/main/figures/textdoc_classification_report.png)
 
 Classification report shows the accuracy of the model is ? which is equivalent to ?%.It can accurately predict for all the categories.
 
-![Image]()
+![Image](https://github.com/innju/text-classification/blob/main/figures/textdoc_tensorboard.png)
 
 The performance of the model is viewed from tensorboard. In order to access to the tensorboard, you will need to follow the steps below:
 Open anaconda prompt> conda activate (environment name) > tensorboard --logdir (path pointed to relevant log file)
