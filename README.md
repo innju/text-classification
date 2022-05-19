@@ -29,20 +29,20 @@ Embedding layer is used to fasten the training process. LSTM layer kept all the 
 
 ![Image](https://github.com/innju/text-classification/blob/main/figures/textdoc_classification_report.png)
 
-Classification report shows the accuracy of the model is 0.90 which is equivalent to 90.0%.It can accurately predict for all the categories.
+Classification report shows the accuracy of the model is 0.90 which is equivalent to 90.0%.It can accurately predict for all the categories.However, there is occurences of overfitting.
 
 ![Image](https://github.com/innju/text-classification/blob/main/figures/textdoc_tensorboard.png)
 
 The performance of the model is viewed from tensorboard. In order to access to the tensorboard, you will need to follow the steps below:
 Open anaconda prompt> conda activate (environment name) > tensorboard --logdir (path pointed to relevant log file)
 
-<br>Tensorboard show performance of model through the epoch loss and epoch accuracy. The training data (blue line) gained higher value for epoch accuracy and lower value for epoch loss compared to the validate (red line). This means the model actually trained well with the training data only but performed poorly on the new data in validation set. Suspecting there is overfitting occured here because the epoch loss for validate is much more higher, with the value of 0.54. Therefore, spotted validation loss decreases and start to increase again. Possible solution is to reduce the complexity of the model. Early stopping could be introduced to prevent it from overfitting as well, provided the the number of training epochs is large.
+<br>Tensorboard show performance of model through the epoch loss and epoch accuracy. The training data (blue line) gained higher value for epoch accuracy and lower value for epoch loss compared to the validate (red line). This means the model actually trained well with the training data only but performed poorly on the new data in validation set. Suspecting there is overfitting occured here because the epoch loss for validate is much more higher, with the value of 0.54. Therefore, spotted validation loss decreases and start to increase again. Possible solution is to reduce the complexity of the model. Early stopping could also be introduced to prevent it from overfitting as well, provided the the number of training epochs is large.
 
 
 ### IMPROVEMENTS/SUGGESTIONS
 1. Training deep learning model required more times because it analyzed based on large amount of words. Use google colab to train the model if the capacity of your device is not sufficient.
-2. Can try to explore more ways of data cleaning in order to ensure the input loading to the deep learning model is sufficient with adequate amount of data.
-
+2. Can try to explore more ways of data cleaning in order to ensure the input loading to the deep learning model is sufficient and useful information with adequate amount of data. Examples are removal of stopwords.
+3. Change the deep learning model to a simpler architecture such as removing the bidirectional feature and left only model with LSTM layer. 
 
 
 Thanks for reading.
