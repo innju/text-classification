@@ -34,7 +34,7 @@ Classification report shows the accuracy of the model is 0.90 which is equivalen
 ![Image](https://github.com/innju/text-classification/blob/main/figures/textdoc_tensorboard.png)
 
 The performance of the model is viewed from tensorboard. In order to access to the tensorboard, you will need to follow the steps below:
-Open anaconda prompt> conda activate (environment name) > tensorboard --logdir (path pointed to relevant log file)
+<br>Open anaconda prompt> conda activate (environment name) > tensorboard --logdir (path pointed to relevant log file)
 
 <br>Tensorboard show performance of model through the epoch loss and epoch accuracy. The training data (blue line) gained higher value for epoch accuracy and lower value for epoch loss compared to the validate (red line). This means the model actually trained well with the training data only but performed poorly on the new data in validation set. Suspecting there is overfitting occured here because the epoch loss for validate is much more higher, with the value of 0.54. Therefore, spotted validation loss decreases and start to increase again. Possible solution is to reduce the complexity of the model. Early stopping could also be introduced to prevent it from overfitting as well, provided the the number of training epochs is large.
 
